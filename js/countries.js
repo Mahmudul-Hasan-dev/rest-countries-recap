@@ -19,13 +19,43 @@ const displayCountries = countries => {
 
 
 }
-const getcountryHtml = country => {
+// const getcountryHtml = country => {
+//     const countryhtmldiv = `
+//     <div class="countrydiv">
+//     <h2>
+//     ${country.name.common}
+//     </h2>
+//     <img src="${country.flags.png}">
+//     </div>
+//     `
+//     return countryhtmldiv;
+// }
+
+//option 1
+// const getcountryHtml = country => {
+//     const { name, flags } = country
+//     const countryhtmldiv = `
+//     <div class="countrydiv">
+//     <h2>
+//     ${name.common}
+//     </h2>
+//     <img src="${flags.png}">
+//     </div>
+//     `
+//     return countryhtmldiv;
+// }
+
+//option 2
+const getcountryHtml = ({ name, area, flags }) => {
     const countryhtmldiv = `
     <div class="countrydiv">
     <h2>
-    ${country.name.common}
+    ${name.common}
     </h2>
-    <img src="${country.flags.png}">
+    <h2>
+    ${area}
+    </h2>
+    <img src="${flags.png}">
     </div>
     `
     return countryhtmldiv;
